@@ -7,7 +7,7 @@
     "image": "assets/images/WM1Z_walkman.jpg",
     "category": "MP3 Player",
     "subtitle": "NW-WM1Z",
-    "decription": "High-Resolution Audio compatible, DSD Native up to 11.2 MHz, 256GB built-in memory, 4.4mm Balanced Standard Plug"
+    "description": "High-Resolution Audio compatible, DSD Native up to 11.2 MHz, 256GB built-in memory, 4.4mm Balanced Standard Plug"
 },
   {
     "id": "WM1A",
@@ -17,7 +17,7 @@
     "image": "assets/images/WM1A_walkman.jpg",
     "category": "MP3 Player",
     "subtitle": "NW-WM1A",
-    "decription": "High-Resolution Audio compatible, 128GB built-in memory, Up to 33 hours' playback, 4.4mm Balanced Standard Plug"
+    "description": "High-Resolution Audio compatible, 128GB built-in memory, Up to 33 hours' playback, 4.4mm Balanced Standard Plug"
   },
   {
     "id": "ZX-507",
