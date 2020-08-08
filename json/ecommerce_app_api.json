@@ -7,7 +7,7 @@
     "image": "assets/images/WM1Z_walkman.jpg",
     "category": "MP3 Player",
     "subtitle": "NW-WM1Z",
-    "description": "High-Resolution Audio compatible, DSD Native up to 11.2 MHz, 256GB built-in memory, 4.4mm Balanced Standard Plug"
+    "description": ["High-Resolution Audio compatible", "DSD Native up to 11.2 MHz", "256GB built-in memory", "4.4mm Balanced Standard Plug"]
 },
   {
     "id": "WM1A",
@@ -17,7 +17,7 @@
     "image": "assets/images/WM1A_walkman.jpg",
     "category": "MP3 Player",
     "subtitle": "NW-WM1A",
-    "description": "High-Resolution Audio compatible, 128GB built-in memory, Up to 33 hours' playback, 4.4mm Balanced Standard Plug"
+    "description": ["High-Resolution Audio compatible", "128GB built-in memory", "Up to 33 hours' playback", "4.4mm Balanced Standard Plug"]
   },
   {
     "id": "ZX-507",
@@ -27,7 +27,7 @@
     "image": "assets/images/ZX500_walkman.jpg",
     "category": "MP3 Player",
     "subtitle": "NW-ZX507",
-    "description": "High-Resolution Audio compatible, 11.2MHz DSD native, PCM 384kHz/32bit playback, Supported by Android™, Wi-Fi compatible"
+    "description": ["High-Resolution Audio compatible", "11.2MHz DSD native", "PCM 384kHz/32bit playback", "Supported by Android™, Wi-Fi compatible"]
   },
   {
     "id": "A100",
@@ -37,7 +37,7 @@
     "image": "assets/images/A100_walkman.jpg",
     "category": "MP3 Player",
     "subtitle": "NW-A100",
-    "description": "High-Resolution Audio compatible, Digital Noise Cancelling and Ambient Sound mode, Supported by Android™, Wi-Fi compatible"
+    "description": ["High-Resolution Audio compatible", "Digital Noise Cancelling and Ambient Sound mode", "Supported by Android™", "Wi-Fi compatible"]
   },
   {
     "id": "ZX300",
@@ -47,7 +47,7 @@
     "image": "assets/images/ZX300_walkman.jpg",
     "category": "MP3 Player",
     "subtitle": "NW-ZX300",
-    "description": "High-Resolution Audio compatible, 11.2MHz DSD native, PCM 384kHz/32bit playback, 4.4mm Balanced Standard Plug"
+    "description": ["High-Resolution Audio compatible", "11.2MHz DSD native", "PCM 384kHz/32bit playback", "4.4mm Balanced Standard Plug"]
   },
   {
     "id": "A50",
@@ -57,6 +57,6 @@
     "image": "assets/images/A50_walkman.jpg",
     "category": "MP3 Player",
     "subtitle": "NW-A50",
-    "description": "High-Resolution Audio compatible, BLUETOOTH® Receiver function, Digital Noise Cancelling and ambient sound mode"
+    "description": ["High-Resolution Audio compatible", "BLUETOOTH® Receiver function", "Digital Noise Cancelling and ambient sound mode"]
   }
 ]
