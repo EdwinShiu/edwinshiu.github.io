@@ -27,7 +27,7 @@
     "image": "assets/images/ZX500_walkman.jpg",
     "category": "MP3 Player",
     "subtitle": "NW-ZX507",
-    "description": ["High-Resolution Audio compatible", "11.2MHz DSD native", "PCM 384kHz/32bit playback", "Supported by Android™, Wi-Fi compatible"]
+    "description": ["High-Resolution Audio compatible", "11.2MHz DSD native", "PCM 384kHz/32bit playback", "Supported by Android™", "Wi-Fi compatible"]
   },
   {
     "id": "A100",
