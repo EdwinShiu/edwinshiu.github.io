@@ -1,0 +1,132 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-background-color: #0d1922;
+  --secondary-background-color: #F9F9FF;
+  --primary-text-color: #FAFAFF;
+  --secondary-text-color: #0d1922;
+  /*1B2A41 324A5F 0C1821*/
+  --font-family: Dosis, "PT Sans", roboto, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text-color)
+}
+
+body {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  font-family: var(--font-family);
+  letter-spacing: 1px;
+}
+
+#navbar {
+  position: fixed;
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+#empty-space {
+  height: 6rem;
+}
+
+.navbar-tabs {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-icon {
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+}
+
+.navbar-tabs li {
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+#footer {
+  height: 6rem;
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-text-color);
+  text-align: center;
+  display: block;
+  position: relative;
+}
+
+#footer a {
+  color: var(--secondary-text-color);
+}
+
+#footer p {
+  position: absolute;
+  right: 50%;
+  -ms-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+  bottom: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.footer-tabs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.footer-tabs li {
+  margin-top: 1rem;
+  padding: 0 2rem;
+  font-size: 1.125rem;
+}
+
+#home {
+  height: 100vh;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#home h1 {
+  font-family: "Architects Daughter";
+  font-size: 4rem;
+}
+
+#home p {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+#about {
+  height: 200vh;
+}
