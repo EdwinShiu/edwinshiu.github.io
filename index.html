@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Tammudu+2">
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script.js"></script>
@@ -31,13 +31,56 @@
     </div>
   </section>
   <section id="about">
-
+    <h2 class="about-title">About Me</h2>
+    <div class="about-container">
+      <p>I am a BEng in Computer Science student at the Hong Kong University of Science and Technology (HKUST). I have a passion for front-end programming.</p>
+    </div>
+    
   </section>
   <section id="projects">
 
   </section>
   <section id="contact">
+    <h2 class="contact-title">Contact</h2>
+    <form class="contact-form">
+      <h3 class="form-title">Leave me a message</h3>
+      <div class="form-inputs">
+        <input id="form-name" type="text" class="form-input" required autocomplete="off">
+        <label class="form-label">
+          <span class="form-label-content">Name</span>
+        </label>  
+      </div>
+      <div class="form-inputs">
+        <input id="form-email" type="text" class="form-input" required autocomplete="off">
+        <label class="form-label">
+          <span class="form-label-content">Email</span>
+        </label>  
+      </div>
+      <div class="form-inputs">
+        <input id="form-subject" type="text" class="form-input" required autocomplete="off">
+        <label class="form-label">
+          <span class="form-label-content">Subject</span>
+        </label>  
+      </div>
+      <div class="form-textarea-container">
+        <label for="form-textarea" class="form-label-textarea">
+          <span class="form-textarea-content">Message</span>
+        </label>
+        <div class="textarea-before">
+          <textarea id="form-textarea" type="text" required autocomplete="off"></textarea>
+          <div class="flyin-box"></div>
+        </div>
+      </div>
 
+
+      <!--
+      <label for="form-message" class="form-label">
+        <span class="form-label-content">Message</span>
+        <textarea id="form-message" placeholder="Message" class="form-input" required autocomplete="off"></textarea>
+      </label>
+      -->
+      <button type="submit" class="form-button">Submit</button>
+    </form>
   </section>
   <footer id="footer">
     <ul class="footer-tabs">

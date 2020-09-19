@@ -7,10 +7,12 @@
 :root {
   --primary-background-color: #0d1922;
   --secondary-background-color: #F9F9FF;
+  --primary-form-background-color: #2d3948;
   --primary-text-color: #FAFAFF;
   --secondary-text-color: #0d1922;
+  --primary-border-color: #9e9ea5de;
   /*1B2A41 324A5F 0C1821*/
-  --font-family: Dosis, "PT Sans", roboto, monospace;
+  --font-family: Dosis, roboto, monospace;
 }
 
 html {
@@ -124,9 +126,194 @@ body {
 
 #home p {
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 #about {
   height: 200vh;
+  text-align: center;
 }
+
+.about-title {
+  font-size: 3rem;
+  font-family: "Architects Daughter";
+  margin-top: 3rem;
+}
+
+.about-container {
+  max-width: 50rem;
+  margin: 10rem auto;
+}
+
+.about-container p {
+  font-size: 1.25rem;
+}
+
+#contact {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-family: "Architects Daughter";
+  margin-top: 3rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 3rem auto;
+  justify-content: flex-start;
+  background-color: var(--primary-form-background-color);
+  padding: 3rem;
+}
+
+.form-title {
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-inputs {
+  max-width: 24rem;
+  width: 100%; 
+  height: 3.5rem;
+  position: relative;
+  text-align: start;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.form-label {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid var(--primary-text-color);
+  left: 0;
+  bottom: -1px;
+  transform: translateX(-100%);
+  transition: all 0.2s ease;
+}
+
+.form-label-content {
+  font-size: 1.25rem;
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0;
+  transition: all 0.2s ease;
+  padding-left: 0.25rem;
+  color: var(--primary-border-color);
+}
+
+.form-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: var(--primary-text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding-top: 2rem;
+  border-bottom: 1px solid var(--primary-border-color);
+  outline: none;
+}
+
+.form-input:focus + .form-label .form-label-content,
+ form input:valid + .form-label .form-label-content {
+  transform: translateY(-100%);
+  color: var(--primary-text-color);
+}
+
+.form-input:focus + .form-label::after,
+ form input:valid + .form-label::after {
+  transform: translateX(0%);
+}
+
+.form-textarea-container {
+  max-width: 24rem;
+  width: 100%;
+  text-align: start;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.form-textarea-content {
+  font-size: 1.25rem;
+  transition: all 0.2s ease;
+  padding-left: 0.25rem;
+  color: var(--primary-border-color);
+}
+
+.form-label-textarea {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+#form-textarea {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  top: 1px;
+  left: 1px;
+  background-color: var(--primary-form-background-color);
+  color: var(--primary-text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding-top: 0.25rem;
+  padding-left: 0.25rem;
+  outline: none;
+  border: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.textarea-before {
+  background-color: var(--primary-border-color);
+  height: 6rem;
+  width: 100%;
+  position: relative;
+}
+
+.flyin-box {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-text-color);
+  position: absolute;
+  transform: translateX(-100%);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+#form-textarea:focus + .flyin-box,
+ form textarea:valid + .flyin-box {
+  transform: translateX(0%);
+}
+
+#form-textarea:focus + .form-textarea-content {
+  color: var(--primary-text-color);
+}
+
+.form-button {
+  margin-top: 2rem;
+  background-color: var(--primary-background-color);
+  border: 0;
+  padding: 0.5rem 5rem;
+  color: var(--primary-text-color);
+  font-size: 1.25rem;
+  font-family: var(--font-family);
+}
+
