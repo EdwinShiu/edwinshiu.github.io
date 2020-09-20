@@ -144,12 +144,39 @@ body {
 }
 
 .about-container {
-  max-width: 50rem;
+  display: flex;
+  max-width: 48rem;
   margin: 10rem auto;
 }
 
 .about-container p {
   font-size: 1.25rem;
+}
+
+.about-image {
+  display: flex;
+  align-self: center;
+  max-width: 24rem;
+  max-height: 24rem;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-form-background-color);
+}
+
+.about-context {
+  padding: 1rem 1rem;
+}
+
+.about-context h3 {
+  margin: 3rem 0;
+  font-size: 2rem;
+}
+
+.learning-gif {
+  max-width: 22rem;
+  background-color: var(--primary-text-color);
+  pointer-events: none;
 }
 
 #projects {
