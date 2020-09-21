@@ -148,10 +148,15 @@ body {
   display: flex;
   max-width: 48rem;
   margin: 8rem auto;
+  align-items: center;
 }
 
 .about-container p {
   font-size: 1.25rem;
+}
+
+.about-container .about-paragraph {
+  margin-bottom: 3rem;
 }
 
 .about-image {
@@ -166,6 +171,7 @@ body {
 }
 
 .about-context {
+  max-width: 24rem;
   padding: 1rem 1rem;
 }
 
@@ -185,12 +191,12 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   align-items: center;
   align-self: center;
   justify-content: center;
   background-color: var(--primary-text-color);
   padding: 1.5rem 1rem;
-  margin: 2rem 0;
 }
 
 .grid-title {
@@ -236,24 +242,66 @@ body {
 
 #projects {
   text-align: center;
+  margin-bottom: 8rem;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border-bottom: 1px solid var(--primary-text-color);
+  height: 8rem;
 }
 
 .projects-title {
   font-size: 3rem;
   font-family: "Architects Daughter";
-  margin-top: 3rem;
+  margin: 3rem 0;
+}
+
+.project-title h3 {
+  font-size: 3rem;
+}
+
+.project-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .first-project {
   border-top: 1px solid var(--primary-text-color);
 }
 
-.project {
+.project-info-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: start;
+}
+
+.project-info-context {
+  font-size: 1.25rem;
+}
+
+.project-info {
+  margin: 0.25rem 0;
+}
+
+.project-coming {
   border-bottom: 1px solid var(--primary-text-color);
   height: 8rem;
+}
+
+.project-coming h3 {
+  font-size: 3rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 #contact {
