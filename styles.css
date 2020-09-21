@@ -150,10 +150,39 @@ body {
   max-width: 48rem;
   margin: 8rem auto;
   align-items: center;
+  justify-content: center;
+}
+
+.about-language-container {
+  background-color: var(--primary-form-background-color);
+  max-width: 48rem;
+  margin: 6rem auto;
+  padding: 2rem 0;
+}
+
+.about-language-container h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about-container p {
   font-size: 1.25rem;
+}
+
+.programming-language-grid {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.programming-language-container h5 {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.programming-language-container li {
+  margin-bottom: 0.25rem;
 }
 
 .about-container .about-paragraph {
