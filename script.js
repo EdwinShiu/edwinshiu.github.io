@@ -54,5 +54,9 @@ $(document).ready(function() {
       $(".form-textarea-content").css("color", "var(--primary-border-color)");
     }
   });
+
+  $(".project").click(function(event) {
+    console.log(event.currentTarget.id);
+  });
 })
 
