@@ -58,5 +58,28 @@ $(document).ready(function() {
   $(".project").click(function(event) {
     console.log(event.currentTarget.id);
   });
+
+
+  // navbar navigation
+  navbarHeightInString = $("#navbar").css("height");
+  navbarHeightInString = navbarHeightInString.slice(0, navbarHeightInString.length - 2);
+  const navbarHeight = parseInt(navbarHeightInString);
+  console.log(navbarHeight);
+
+  $(".navbar-tab").on("click", function(event) {
+    event.preventDefault();
+    const id = event.currentTarget.getAttribute("href");
+    const sectionOffsetTop = $(id).offset().top;
+    console.log(sectionOffsetTop);
+    let position = sectionOffsetTop - navbarHeight;
+    window.scrollTo({
+      top: position,
+      left: 0,
+    });
+  });
+  
+
+
+
 })
 

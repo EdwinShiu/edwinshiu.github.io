@@ -55,6 +55,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  background-color: var(--primary-background-color);
+  z-index: 100;
 }
 
 #empty-space {
@@ -281,6 +283,7 @@ body {
   border-bottom: 1px solid var(--primary-text-color);
   height: 8rem;
   position: relative;
+  cursor: pointer;
 }
 
 .project-hover-box {
@@ -305,7 +308,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
-  z-index: 12;
+  z-index: 10;
 }
 
 .hover-box-text h3 {
@@ -326,11 +329,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: blue;
   height: 600px;
   width: 600px;
   pointer-events: none;
-  z-index: 11;
 }
 
 .project:hover .project-hover-box {
@@ -338,7 +339,7 @@ body {
 }
 
 .project:hover .hover-box-text h3 {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .projects-title {
