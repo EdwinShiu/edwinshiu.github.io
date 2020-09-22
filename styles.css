@@ -71,12 +71,46 @@ body {
 .left-icon {
   font-size: 1.25rem;
   letter-spacing: 1.5px;
+  transition: opacity 0.3s ease;
+}
+
+
+.left-icon:hover {
+  opacity: 0.8;
 }
 
 .navbar-tabs li {
   margin-right: 1rem;
   font-size: 1.25rem;
   font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3px;
+}
+
+.navbar-tabs li a {
+  background-color: var(--primary-background-color);
+  position: relative;
+  z-index: 102;
+}
+
+.navbar-tabs li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: white;
+  opacity: 1;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  z-index: 101;
+}
+
+.navbar-tabs li:hover::after{
+  transform: translateX(0%);
 }
 
 #footer {
@@ -109,9 +143,36 @@ body {
 }
 
 .footer-tabs li {
-  margin-top: 1rem;
-  padding: 0 2rem;
+  margin: 1rem 2rem 0rem 2rem;
   font-size: 1.125rem;
+  position: relative;
+  padding-bottom: 1px;
+  overflow: hidden;
+}
+
+.footer-tabs li a {
+  background-color: var(--secondary-background-color);
+  position: relative;
+  z-index: 102;
+}
+
+.footer-tabs li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: var(--secondary-text-color);;
+  opacity: 1;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  z-index: 101;
+}
+
+.footer-tabs li:hover::after{
+  transform: translateX(0%);
 }
 
 #home {
@@ -560,5 +621,11 @@ body {
   color: var(--primary-text-color);
   font-size: 1.25rem;
   font-family: var(--font-family);
+  transition: all 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: var(--primary-text-color);
+  color: var(--primary-background-color);
 }
 
