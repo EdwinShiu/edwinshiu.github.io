@@ -8,6 +8,22 @@ const COMMIT = [
 
 const MONTH = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+var firebaseConfig = {
+  apiKey: "AIzaSyBTmjnVwrG2My7bAnsQ0SkTgbbkg0q8Ess",
+  authDomain: "personal-profile-4463e.firebaseapp.com",
+  databaseURL: "https://personal-profile-4463e.firebaseio.com",
+  projectId: "personal-profile-4463e",
+  storageBucket: "personal-profile-4463e.appspot.com",
+  messagingSenderId: "503415004644",
+  appId: "1:503415004644:web:4b6f6d5916cda52be1fbf1"
+};
+
+firebase.initializeApp(firebaseConfig);
+const app = firebase.app();
+const db = firebase.firestore();
+//console.log(app);
+
+
 let date = new Date();
 let weekday = date.getDay() + 1;
 let month = MONTH[date.getMonth()];
@@ -55,33 +71,22 @@ $(document).ready(function() {
     }
   });
 
-  $(".project").click(function(event) {
-    console.log(event.currentTarget.id);
-  });
-
-
   // navbar navigation
   navbarHeightInString = $("#navbar").css("height");
   navbarHeightInString = navbarHeightInString.slice(0, navbarHeightInString.length - 2);
   const navbarHeight = parseInt(navbarHeightInString);
-  console.log(navbarHeight);
 
   $(".navbar-tab").on("click", function(event) {
     event.preventDefault();
     $(".navbar-tabs").removeClass("show-class");
     const id = event.currentTarget.getAttribute("href");
     const sectionOffsetTop = $(id).offset().top;
-    console.log(sectionOffsetTop);
     let position = sectionOffsetTop - navbarHeight;
     window.scrollTo({
       top: position,
       left: 0,
     });
   });
-  
-  $("li").hover(function(event) {
-    console.log("hi")
-  })
 
   // navbar menu
   $(".navbar-button").on("click", function(event) {
@@ -94,5 +99,24 @@ $(document).ready(function() {
     }
     $(".navbar-tabs").toggleClass("show-class");
   });
+
+  // submit to firebase
+
+  $(".contact-form").on("submit", function(event) {
+    event.preventDefault();
+    var name = $("#form-name").val();
+    var email = $("#form-email").val();
+    var subject = $("#form-subject").val();
+    var message = $("#form-textarea").val();
+    // console.log(name + email +  subject + message);
+    db.collection("Contact").add({
+      "name": name,
+      "email": email,
+      "subject": subject,
+      "message": message,
+      "date": new Date(),
+    })
+  });
+
 })
 
