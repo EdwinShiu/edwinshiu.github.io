@@ -50,15 +50,15 @@ body {
 
 #navbar {
   position: fixed;
-  height: 6rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1.5rem 1.5rem;
   background-color: var(--primary-background-color);
   z-index: 100;
+  overflow: hidden;
 }
 
 #empty-space {
@@ -68,14 +68,59 @@ body {
 .navbar-tabs {
   display: flex;
   flex-direction: row;
+  transition: all 0.5s ease;
 }
+
 
 .left-icon {
   font-size: 1.25rem;
   letter-spacing: 1.5px;
-  transition: opacity 0.3s ease;
 }
 
+
+.navbar-button {
+  display: none;
+  border: none;
+  background-color: transparent;
+  color: var(--primary-text-color);
+  font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #navbar {
+    display: block;
+  }
+
+  .navbar-button {
+    display: block;
+  }
+
+  .nav-bar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-tabs {
+    flex-direction: column;
+    height: 0;
+  }
+
+  .show-class {
+    height: 12rem;
+  }
+
+  .navbar-tabs li {
+    margin-top: 1rem;
+    padding-bottom: 3px;
+  }
+}
 
 .left-icon:hover {
   opacity: 0.8;
@@ -88,6 +133,7 @@ body {
   position: relative;
   overflow: hidden;
   padding-bottom: 3px;
+  width: fit-content;
 }
 
 .navbar-tabs li a {
@@ -646,6 +692,8 @@ body {
   font-size: 1.25rem;
   font-family: var(--font-family);
   transition: all 0.3s ease;
+  outline: none;
+  cursor: pointer;
 }
 
 .form-button:hover {

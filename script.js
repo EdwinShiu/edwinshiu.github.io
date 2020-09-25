@@ -68,6 +68,7 @@ $(document).ready(function() {
 
   $(".navbar-tab").on("click", function(event) {
     event.preventDefault();
+    $(".navbar-tabs").removeClass("show-class");
     const id = event.currentTarget.getAttribute("href");
     const sectionOffsetTop = $(id).offset().top;
     console.log(sectionOffsetTop);
@@ -82,6 +83,16 @@ $(document).ready(function() {
     console.log("hi")
   })
 
-
+  // navbar menu
+  $(".navbar-button").on("click", function(event) {
+    event.preventDefault();
+    if ($(this).css("transform") == "none") {
+      $(this).css("transform", "rotate(180deg)");
+    }
+    else {
+      $(this).css("transform", "");
+    }
+    $(".navbar-tabs").toggleClass("show-class");
+  });
 })
 
