@@ -48,7 +48,7 @@ function getGridType() {
   return temp;
 }
 
-// form textarea animation
+
 $(document).ready(function() {
 
   // adding commit grid
@@ -62,6 +62,7 @@ $(document).ready(function() {
   // changing grid month
   $(".grid-month").append(month);
 
+  // form textarea animation
   $("#form-textarea").focus(function() {
     $(".form-textarea-content").css("color", "var(--primary-text-color)");
   });
@@ -116,6 +117,15 @@ $(document).ready(function() {
       "message": message,
       "date": new Date(),
     })
+    $("#form-name").val("");
+    $("#form-email").val("");
+    $("#form-subject").val("");
+    $("#form-textarea").val("");
+    $(".form-textarea-content").css("color", "var(--primary-border-color)");
+    $(".form-button").text("Done");
+    setTimeout(function() { 
+      $(".form-button").text("Submit");
+    }, 2000);
   });
 
 })
